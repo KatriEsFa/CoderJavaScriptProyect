@@ -1,7 +1,7 @@
 document.getElementById("submitBtn").addEventListener("click", function () {
     let numInicial = parseInt(document.getElementById("numInicial").value)
     let numFinal = parseInt(document.getElementById("numFinal").value)
-    let numerosPrimos = "Los numeros primos entre A y B son: "
+    const numerosPrimos = ["Los numeros primos entre A y B son: "]
     if (isNaN(numInicial) || isNaN(numFinal)) {
         document.getElementById("nrosPrimos").innerHTML = "Debes ingresar un numero"
     }
@@ -19,7 +19,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
                 }
             }
             if (esPrimo) {
-                numerosPrimos += i + ", "
+                numerosPrimos.push(i)
             }
 
         }
