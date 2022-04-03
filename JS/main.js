@@ -1,28 +1,26 @@
-document.getElementById("submitBtn").addEventListener("click", function () {
-    let numInicial = parseInt(document.getElementById("numInicial").value)
-    let numFinal = parseInt(document.getElementById("numFinal").value)
-    const numerosPrimos = ["Los numeros primos entre A y B son: "]
-    if (isNaN(numInicial) || isNaN(numFinal)) {
-        document.getElementById("nrosPrimos").innerHTML = "Debes ingresar un numero"
-    }
-    else if ((numInicial <= 1) || (numFinal <= 1)) {
-        document.getElementById("nrosPrimos").innerHTML = "El numero ingresado no es correcto, ingrese un numero mayor a 1"
+const arrayElementosInventario = [];
 
+function capturar() {
+    function Elemento(tipo, estado, prestamo) {
+        this.tipo = tipo;
+        this.estado = estado;
+        this.prestamo = prestamo;
     }
-    else {
-        for (let i = numInicial; i <= numFinal; i++) {
-            let esPrimo = true
-            for (let j = 2; j <= Math.sqrt(i); j++) {
-                if (i % j === 0) {
-                    esPrimo = false;
-                    break;
-                }
-            }
-            if (esPrimo) {
-                numerosPrimos.push(i)
-            }
+    let tipoCapturar = document.getElementById("tipo").value;
+    let estadoCapturar = document.getElementById("estado").value;
 
-        }
-        document.getElementById("nrosPrimos").innerHTML = numerosPrimos
-    }
-})
+    let prestamoCapturar = document.getElementById("prestamo")
+
+    nuevoElemento = new Elemento(tipoCapturar, estadoCapturar, prestamoCapturar);
+    console.log(nuevoElemento);
+    agregar();
+}
+function agregar() {
+    arrayElementosInventario.push(nuevoElemento);
+    console.log(arrayElementosInventario)
+}
+function consultDisp() {
+    arrayElementosInventario.filter(prestamo = off)
+    document.getElementById("nrosPrimos").innerHTML = numerosPrimos
+}
+

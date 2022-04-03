@@ -11,21 +11,26 @@
 </head>
 
 <body>
-    <div id="formDiv">
-        <form id="formularioProgram">
-            <label class="labelForm" for="numInicial">Indique un nº Inicial mayor a 1 </label>
-            <input type="text" id="numInicial" class="inputForm">
-            <label class="labelForm" for="numFinal">Indique un numero final mayor al inicial</label>
-            <input type="text" id="numFinal" class="inputForm">
-            <input type="button" id="submitBtn" value="Enviar">
-        </form>
-    </div>
-    <div id="nrosPrimos">
+    <main>
+        <div id="formDiv">
+            <form id="formularioProgram">
+                <label for="tipo">¿Que tipo de elemento quiere agregar al inventario?</label>
+                <input type="text" id="tipo">
+                <label for="estado">¿En qué estado está el elemento?</label>
+                <input type="text" id="estado">
+                <label for="prestamo">¿Está en préstamo?</label>
+                <input type="checkbox" id="prestamo">
+                <button id="btnAgregar" type="reset" onclick="capturar()">Agregar</button>
+                <button id="btnDisponibles" type="reset" onclick="consultDisp()">Consultar disponibles</button>
+            </form>
+        </div>
+        <div id="elementosDisponibles">
 
-    </div>
+        </div>
 
 
-    <script src="./JS/main.js"></script>
+        <script src="./JS/main.js"></script>
+    </main>
 </body>
 
 </html>
