@@ -1,11 +1,13 @@
 const arrayElementosInventario = [];
-
-function capturar() {
-    function Elemento(tipo, estado, prestamo) {
+class Elemento {
+    constructor(tipo, estado, prestamo) {
         this.tipo = tipo;
         this.estado = estado;
         this.prestamo = prestamo;
     }
+}
+function capturar() {
+
     let tipoCapturar = document.getElementById("tipo").value;
     let estadoCapturar = document.getElementById("estado").value;
     let prestamoCapturar = document.getElementById("prestamo").checked;
