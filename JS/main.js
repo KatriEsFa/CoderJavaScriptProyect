@@ -8,8 +8,7 @@ function capturar() {
     }
     let tipoCapturar = document.getElementById("tipo").value;
     let estadoCapturar = document.getElementById("estado").value;
-
-    let prestamoCapturar = document.getElementById("prestamo")
+    let prestamoCapturar = document.getElementById("prestamo").checked;
 
     nuevoElemento = new Elemento(tipoCapturar, estadoCapturar, prestamoCapturar);
     console.log(nuevoElemento);
@@ -20,7 +19,11 @@ function agregar() {
     console.log(arrayElementosInventario)
 }
 function consultDisp() {
-    arrayElementosInventario.filter(prestamo = off)
-    document.getElementById("nrosPrimos").innerHTML = numerosPrimos
+    const listaDeDisponibles = arrayElementosInventario.filter((e) => e.prestamo === false);
+    let stringListado = "";
+    listaDeDisponibles.forEach(elementoInventario => {
+        stringListado += elementoInventario.tipo + ", "
+    });
+    stringListado = stringListado.slice(0, -2);
+    document.getElementById("elementosDisponibles").innerHTML = stringListado;
 }
-
