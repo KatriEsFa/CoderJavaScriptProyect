@@ -1,9 +1,12 @@
+
 const arrayElementosInventario = [];
 class Elemento {
-    constructor(tipo, estado, prestamo) {
+    constructor(tipo, estado, prestamo, nombreItem, poseedor) {
         this.tipo = tipo;
+        this.nombreItem = nombreItem;
         this.estado = estado;
         this.prestamo = prestamo;
+        this.poseedor = poseedor;
     }
 }
 function capturar() {

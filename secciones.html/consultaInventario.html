@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultor Intenvatrio</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="divFormSolicitud">
+            <form id="formSolicitud">
+                <label> Elige el tipo de item que desea solicitar.</label>
+                <label for="checkPreparado">Preparado</label>
+                <input type="checkbox" id="checkPreparado" name="checkboxTipoForm" value="Preparado">
+                <label for="checkMaqueta">Maqueta</label>
+                <input type="checkbox" id="checkMaqueta" value="Maqueta" name="checkboxTipoForm">
+                <label for="checkInstrumento">Instrumento</label>
+                <input type="checkbox" id="checkInstrumento" value="Instrumento" name="checkboxTipoForm">
+                <button type="reset" id="btnFormConsult">Buscar</button>
+            </form>
+        </div>
+    </main>
+    <aside>
+        <div id="muestraResultado"></div>
+    </aside>
+    <footer>
+
+    </footer>
+
+
+    <script src="../JS/consultorObjetos.js" type="module"></script>
+</body>
+
+</html>
